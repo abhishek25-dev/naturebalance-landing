@@ -325,8 +325,69 @@ It is not described as a treatment or cure for disease, and the usual supplement
   }
 </script>
 
+<!-- ===== Footer with Unique Visitor Counter ===== -->
+<footer>
+  <div class="footer-container">
+    <p>© 2025 NatureBalance Wellness Products</p>
+    <p>👁 Unique Visitors: <span id="count">Loading...</span></p>
+  </div>
+</footer>
+
+<script>
+  const counterKey = 'naturebalance-unique';
+  const storageKey = 'visited_' + counterKey;
+
+  // Function to update visitor display
+  function updateCount() {
+    fetch(`https://api.countapi.xyz/get/${counterKey}/visits`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('count').textContent = data.value || 0;
+      })
+      .catch(() => {
+        document.getElementById('count').textContent = 'Error';
+      });
+  }
+
+  // Check if visitor already counted
+  if (!localStorage.getItem(storageKey)) {
+    fetch(`https://api.countapi.xyz/hit/${counterKey}/visits`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('count').textContent = data.value;
+        localStorage.setItem(storageKey, 'true');
+      })
+      .catch(() => {
+        document.getElementById('count').textContent = 'Error';
+      });
+  } else {
+    updateCount();
+  }
+</script>
+
+<style>
+  footer {
+    background: #c8e6c9;
+    color: #2e7d32;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #a5d6a7;
+  }
+
+  .footer-container p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .footer-container span {
+    font-weight: 600;
+  }
+</style>
+  
 </body>
 </html>
+
 
 
 
