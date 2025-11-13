@@ -338,33 +338,30 @@ It is not described as a treatment or cure for disease, and the usual supplement
   const storageKey = 'visited_' + counterKey;
 
   function updateCount() {
-    fetch(`https://api.countapi.xyz/get/${counterKey}/visits`)
+    fetch(`https://countapi-js.vercel.app/api/get/${counterKey}`)
       .then(res => res.json())
       .then(data => {
         document.getElementById('count').textContent = data.value || 0;
       })
-      .catch(err => {
-        console.error('CountAPI error:', err);
-        document.getElementById('count').textContent = 'Error';
+      .catch(() => {
+        document.getElementById('count').textContent = 'Tracking offline';
       });
   }
 
   if (!localStorage.getItem(storageKey)) {
-    fetch(`https://api.countapi.xyz/hit/${counterKey}/visits`)
+    fetch(`https://countapi-js.vercel.app/api/hit/${counterKey}`)
       .then(res => res.json())
       .then(data => {
         document.getElementById('count').textContent = data.value;
         localStorage.setItem(storageKey, 'true');
       })
-      .catch(err => {
-        console.error('CountAPI error:', err);
-        document.getElementById('count').textContent = 'Error';
+      .catch(() => {
+        document.getElementById('count').textContent = 'Tracking offline';
       });
   } else {
     updateCount();
   }
 </script>
-
 
 <style>
   footer {
@@ -388,6 +385,7 @@ It is not described as a treatment or cure for disease, and the usual supplement
   
 </body>
 </html>
+
 
 
 
