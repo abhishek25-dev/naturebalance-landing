@@ -334,22 +334,21 @@ It is not described as a treatment or cure for disease, and the usual supplement
 </footer>
 
 <script>
-  const counterKey = 'naturebalance-unique';
+  const counterKey = 'naturebalance_unique_2025';
   const storageKey = 'visited_' + counterKey;
 
-  // Function to update visitor display
   function updateCount() {
     fetch(`https://api.countapi.xyz/get/${counterKey}/visits`)
       .then(res => res.json())
       .then(data => {
         document.getElementById('count').textContent = data.value || 0;
       })
-      .catch(() => {
+      .catch(err => {
+        console.error('CountAPI error:', err);
         document.getElementById('count').textContent = 'Error';
       });
   }
 
-  // Check if visitor already counted
   if (!localStorage.getItem(storageKey)) {
     fetch(`https://api.countapi.xyz/hit/${counterKey}/visits`)
       .then(res => res.json())
@@ -357,13 +356,15 @@ It is not described as a treatment or cure for disease, and the usual supplement
         document.getElementById('count').textContent = data.value;
         localStorage.setItem(storageKey, 'true');
       })
-      .catch(() => {
+      .catch(err => {
+        console.error('CountAPI error:', err);
         document.getElementById('count').textContent = 'Error';
       });
   } else {
     updateCount();
   }
 </script>
+
 
 <style>
   footer {
@@ -387,6 +388,7 @@ It is not described as a treatment or cure for disease, and the usual supplement
   
 </body>
 </html>
+
 
 
 
