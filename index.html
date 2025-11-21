@@ -20,12 +20,10 @@
 ============================= */
 * {
   backface-visibility: hidden;
-  will-change: auto;
-}
+  will-change: auto; }
 
 img {
-  content-visibility: auto;
-}
+  content-visibility: auto; }
 
 body {
   margin: 0;
@@ -34,8 +32,7 @@ body {
   color: #f4f7f5;
   overflow-x: hidden;
   opacity: 0;
-  transition: opacity .6s ease;
-}
+  transition: opacity .6s ease; }
 
 body.loaded {
   opacity: 1;
@@ -59,7 +56,6 @@ body.loaded {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 /* ======================
       NAVBAR
 ====================== */
@@ -68,26 +64,22 @@ nav {
   align-items: center;
   padding: 18px 10px;
 }
-
 .nb-logo {
   width: 55px;
   height: 55px;
   margin-right: 12px;
   filter: drop-shadow(0 0 5px rgba(212,175,55,0.3));
 }
-
 .brand-title {
   font-family: "Playfair Display", serif;
   color: var(--gold);
   font-size: 1.45rem;
   font-weight: 900;
 }
-
 .brand-sub {
   color: var(--muted);
   font-size: .75rem;
 }
-
 /* ======================
         HERO
 ====================== */
@@ -200,7 +192,7 @@ nav {
 
 .product-card img {
   width: 100%;
-  height: 260px;
+  height: 200px;
   object-fit: cover;
   transition: transform .5s ease;
 }
@@ -294,7 +286,7 @@ nav {
 }
 
 .modal-card img {
-  width: 160px;
+  width: 140px;
   border-radius: 8px;
 }
 
@@ -450,6 +442,33 @@ nav {
   <!-- =======================
        PRODUCT TEMPLATE
   ======================== -->
+
+   <article class="product-card supplement" 
+    data-name="Pineal XT Supplement"
+    data-img="https://i.pinimg.com/736x/a6/ef/9a/a6ef9a4e042e8bbfd2b4fb6ec6bd1582.jpg"
+    data-link="https://pxt.pinealxt.com/ds/presentation/index.php#aff=Vaibhav321"
+    data-desc="Discover how Pineal XT helps you activate your third eye, clear mental fog, boost natural energy, and improve focus & spiritual awareness.
+Formulated with powerful natural ingredients, this supplement supports pineal gland detox, deep relaxation, mental clarity, and higher intuition.
+
+Perfect for people looking for:
+✨ Better focus & sharp mind
+✨ Spiritual awakening
+✨ Deep sleep & relaxation
+✨ Detox & stress relief
+
+Click now to see how Pineal XT can transform your daily energy and mindset !
+      
+It is not described as a treatment or cure for disease, and the usual supplement disclaimers apply.">
+
+    <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/a6/ef/9a/a6ef9a4e042e8bbfd2b4fb6ec6bd1582.jpg">
+    <h3>Pineal XT Supplement</h3>
+    <p>Unlock Your Third Eye Naturally with Pineal XT – Boost Energy, Focus & Spiritual Clarity</p>
+
+    <div class="actions">
+      <button class="btn-gold" onclick="openModal(this)">Learn More</button>
+      <a class="btn-buy" href="https://pxt.pinealxt.com/ds/presentation/index.php#aff=Vaibhav321">Buy Now</a>
+    </div>
+  </article>
 
   <article class="product-card supplement" 
     data-name="Nervovive Supplement"
@@ -669,3 +688,4 @@ function searchProducts() {
 
 </body>
 </html>
+
