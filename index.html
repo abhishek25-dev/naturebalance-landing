@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <title>NatureBalance — Luxury Wellness</title>
 <meta name="description" content="NatureBalance — Premium dark emerald and gold luxury wellness brand offering natural supplements and skincare.">
 
@@ -11,13 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://i.pinimg.com">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
-
 <style>
-/* ============================
-   GLOBAL FAST-LOAD SETTINGS
-============================= */
+   
+/* ============================ GLOBAL FAST-LOAD SETTINGS ============================= */
 * {
   backface-visibility: hidden;
   will-change: auto; }
@@ -38,7 +34,7 @@ body.loaded {
   opacity: 1;
 }
 
-/* Colors */
+/* ========= Colors ========= */
 :root {
   --emerald: #0b3d33;
   --emerald-light: #145e4b;
@@ -50,15 +46,12 @@ body.loaded {
   --shadow: 0 10px 40px rgba(0,0,0,0.5);
   --transition: .35s ease;
 }
-
 .container {
   max-width: 1450px;
   margin: 0 auto;
   padding: 0 20px;
 }
-/* ======================
-      NAVBAR
-====================== */
+/* ================== NAVBAR ================== */
 nav {
   display: flex;
   align-items: center;
@@ -80,22 +73,18 @@ nav {
   color: var(--muted);
   font-size: .75rem;
 }
-/* ======================
-        HERO
-====================== */
+/* ================= HERO ================= */
 .hero {
   text-align: center;
   padding: 60px 20px 30px;
   background: radial-gradient(circle at 50% 0%, rgba(112,105,25,0.05), transparent 130%);
 }
-
 .hero h1 {
   font-family: "Playfair Display", serif;
   font-size: 2.4rem;
   color: var(--gold-soft);
   margin-bottom: 10px;
 }
-
 .hero p {
   color: var(--muted);
   font-size: 1rem;
@@ -103,15 +92,12 @@ nav {
   margin: 10px auto 0;
 }
 
-/* ======================
-      SEARCH
-====================== */
+/* ============ SEARCH ============ */
 .search-bar {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-
 .search-bar input {
   width: 90%;
   max-width: 380px;
@@ -124,14 +110,11 @@ nav {
   outline: none;
   transition: var(--transition);
 }
-
 .search-bar input:focus {
   border-color: var(--gold);
 }
 
-/* ======================
-      FILTERS
-====================== */
+/* ============ FILTERS ============ */
 .filters {
   display: flex;
   justify-content: center;
@@ -157,9 +140,7 @@ nav {
   transform: translateY(-2px);
 }
 
-/* ======================
-      PRODUCT GRID
-====================== */
+/* ============ PRODUCT GRID ============ */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -167,7 +148,6 @@ nav {
   margin-top: 15px;
   padding: 0 20px;
 }
-
 .product-card {
   display: flex;
   flex-direction: column;
@@ -181,7 +161,6 @@ nav {
   text-align: center;
   transition: opacity .7s ease, transform .7s ease;
 }
-
 .product-card:nth-child(odd) {transition-delay: .1s;}
 .product-card:nth-child(even) {transition-delay: .25s;}
 
@@ -189,31 +168,27 @@ nav {
   opacity: 1;
   transform: translateY(0);
 }
-
 .product-card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   transition: transform .5s ease;
 }
-
 .product-card:hover img {
   transform: scale(.88);
 }
-
 .product-card h3 {
   font-family: "Playfair Display", serif;
   color: var(--gold);
   font-size: 1.15rem;
   margin: 12px 16px 6px;
 }
-
 .product-card p {
   color: var(--muted);
   padding: 0 18px;
 }
 
-/* ACTION BUTTONS */
+/* ========== ACTION BUTTONS ========== */
 .actions {
   display: flex;
   gap: 10px;
@@ -252,9 +227,7 @@ nav {
   transform: translateY(-3px);
 }
 
-/* ======================
-        MODAL
-====================== */
+/* ========= MODAL ========= */
 .modal {
   position: fixed;
   inset: 0;
@@ -265,11 +238,9 @@ nav {
   backdrop-filter: blur(5px);
   z-index: 999;
 }
-
 .modal.show {
   display: flex;
 }
-
 .modal-card {
   background: var(--emerald);
   border-radius: var(--radius);
@@ -278,29 +249,24 @@ nav {
   max-width: 620px;
   box-shadow: var(--shadow);
 }
-
 .modal-content {
   display: flex;
   gap: 20px;
   white-space: pre-line;
 }
-
 .modal-card img {
   width: 220px;
   border-radius: 8px;
 }
-
 .modal-title {
   color: var(--gold);
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
 }
-
 .modal-desc {
   margin-top: 10px;
   color: var(--muted);
 }
-
 .close-x {
   position: absolute;
   top: 10px;
@@ -310,9 +276,7 @@ nav {
   font-size: 28px;
 }
 
-/* ======================
-      FOOTER
-====================== */
+/* ============  FOOTER  ============ */
 .footer {
   text-align: center;
   padding: 8px 10px;
@@ -321,7 +285,7 @@ nav {
   position: relative;
 }
 
-/* Gradient Gold Top Line */
+/* ========== Gradient Gold Top Line ========= */
 .footer::before {
   content: "";
   position: absolute;
@@ -357,7 +321,7 @@ nav {
   transition: 0.3s ease;
 }
 
- /* Glowing Gold Hover Effects */
+ /* ===== Glowing Gold Hover Effects ===== */
 .footer-social span:hover {
   transform: scale(1.25);
   color: var(--gold-soft);
@@ -371,12 +335,9 @@ nav {
   color: var(--gold-soft);       /* soft gold for subtle look */
 }
 
-
-/* ============================
-      MOBILE RESPONSIVENESS
-============================ */
+/* ============================    MOBILE RESPONSIVENESS    ============================ */
+   
 @media (max-width: 600px) {
-
   .hero h1 {font-size: 1.9rem;}
   .hero p {font-size: .85rem;}
 
@@ -384,25 +345,21 @@ nav {
     grid-template-columns: 1fr;
     gap: 18px;
   }
-
   .actions {
     flex-direction: column;
     width: 92%;
     margin: 12px auto 20px;
   }
-
   .btn-buy, .btn-gold {width: 100%;
     text-align: center;
     padding: 12px 16px;      /* matching size */
     font-size: 1rem;         /* same font */
     box-sizing: border-box;
   }
-
   .modal-content {
     flex-direction: column;
     text-align: center;
   }
-
   .modal-card img {
     width: 140px;
     margin: 0 auto;
@@ -439,9 +396,31 @@ nav {
 
 <main class="product-grid">
 
-  <!-- =======================
-       PRODUCT TEMPLATE
-  ======================== -->
+  <!-- =============== PRODUCT TEMPLATE ================ -->
+
+   <article class="product-card supplement" 
+    data-name="CogniSurge Supplement"
+    data-img="https://i.pinimg.com/736x/2c/25/98/2c2598c7b335b85ab636545ed2e16569.jpg"
+    data-link="https://thecognisurge.com/ds/go/indexvs.php#aff=Vaibhav321"
+    data-desc="Are you tired of feeling mentally drained, forgetful, or unable to focus when it matters most?
+You’re not alone. Today, millions of people silently struggle with brain fog, slow memory, lack of concentration, fatigue, and mental burnout—yet very few know the real cause behind it.
+
+Your brain’s natural energy and neurotransmitter pathways gradually weaken over time due to toxins, inflammation, nutrient deficiency, and disrupted cellular energy cycles. 
+When your brain cells don’t receive the right fuel, your mental performance drops—no matter how hard you try.
+
+This is where CogniSurge steps in like a breakthrough solution.
+      
+It is not described as a treatment or cure for disease, and the usual supplement disclaimers apply.">
+
+    <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/2c/25/98/2c2598c7b335b85ab636545ed2e16569.jpg">
+    <h3>CogniSurge Supplement</h3>
+    <p>6-Second Himalayan Memory Ritual to Restore Sharp Memory & Mental Clarity</p>
+
+    <div class="actions">
+      <button class="btn-gold" onclick="openModal(this)">Learn More</button>
+      <a class="btn-buy" href="https://thecognisurge.com/ds/go/indexvs.php#aff=Vaibhav321">Buy Now</a>
+    </div>
+  </article>
 
    <article class="product-card supplement" 
     data-name="iGenics Vision Supplement"
@@ -762,6 +741,7 @@ function searchProducts() {
 
 </body>
 </html>
+
 
 
 
