@@ -392,12 +392,38 @@ nav {
   <button onclick="filterProducts('supplement', event)">Supplements</button>
   <button onclick="filterProducts('skincare', event)">Skincare</button>
   <button onclick="filterProducts('oil', event)">Oils</button>
+  <button onclick="filterProducts('other', event)">Others</button>
 </div>
 
 <main class="product-grid">
 
   <!-- =============== PRODUCT TEMPLATE ================ -->
 
+   <article class="product-card other" 
+    data-name="Tesla Grounding"
+    data-img="https://i.pinimg.com/736x/05/90/f5/0590f568e197711b0ec2cf033acf23d9.jpg"
+    data-link="https://teslacare.net/tesla-grounding-dg/#aff=Vaibhav321"
+    data-desc="The Ultimate Natural Wellness Tool – Tesla Grounding for Pain, Stress and Sleep.
+
+Tesla Grounding is one of the simplest yet most powerful natural wellness tools you can add to your lifestyle. 
+It works by connecting your body to the Earth’s natural charge—similar to plugging your body into the planet’s energy source.
+
+Pain, swelling, inflammation, and muscle tension often come from electrical imbalance in the body. 
+Grounding helps neutralize these imbalances, making it easier for the body to heal itself. 
+Many users experience noticeable pain relief within days.
+
+Stress reduction is another powerful benefit. Grounding supports healthy cortisol levels, helping the brain relax and reducing anxiety.">
+
+    <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/05/90/f5/0590f568e197711b0ec2cf033acf23d9.jpg">
+    <h3>Tesla Grounding</h3>
+    <p>Finally! A Real Solution for Stress, Pain & Low Energy – Tesla Grounding Works!</p>
+
+    <div class="actions">
+      <button class="btn-gold" onclick="openModal(this)">Learn More</button>
+      <a class="btn-buy" href="https://teslacare.net/tesla-grounding-dg/#aff=Vaibhav321">Buy Now</a>
+    </div>
+  </article>
+   
    <article class="product-card supplement" 
     data-name="CogniSurge Supplement"
     data-img="https://i.pinimg.com/736x/2c/25/98/2c2598c7b335b85ab636545ed2e16569.jpg"
@@ -628,7 +654,7 @@ Thousands of women are already loving their results — don’t miss your chance
     </div>
   </article>
 
-   <article class="product-card supplement" 
+   <article class="product-card other" 
     data-name="Collagen Test"
     data-img="https://i.pinimg.com/736x/2a/59/d8/2a59d857656ba17b3297db859ec7bd9d.jpg"
     data-link="https://www.advancedbionutritionals.com/DS24/Collagen/This-Simple-10-Second-Kitchen-Test/HD.htm#aff=Vaibhav321"
@@ -741,6 +767,7 @@ function searchProducts() {
 
 </body>
 </html>
+
 
 
 
